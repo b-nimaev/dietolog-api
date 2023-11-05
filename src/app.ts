@@ -55,7 +55,7 @@ app.post(`/telegraf/secret_path`, (req, res) => {
 
 app.get("/", (req, res) => res.send("Бот запущен!"))
 
-app.get("/collections", async (req, res) => {
+app.get("/api/collections", async (req, res) => {
     try {
         const collections = await client.getCollections()
         res.send(collections)
