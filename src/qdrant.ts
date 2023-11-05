@@ -220,7 +220,8 @@ async function updateUUID() {
 // importdataset()
 
 (async function () {
-    // await importdataset('firstParams').catch(error => { console.log(error) })
+    // await updateUUID()
+    await importdataset('firstParams').catch(error => { console.log(error) })
 })();
 
 // const input = { input: 'Your input string goes here', model: 'text-embedding-ada-002' };
