@@ -65,7 +65,7 @@ app.get("/api/collections", async (req, res) => {
     }
 });
 
-app.get("/collections/:collectionName", async (req, res) => {
+app.get("/api/collections/:collectionName", async (req, res) => {
     try {
 
         const collectionName = req.params.collectionName;
@@ -81,7 +81,7 @@ app.get("/collections/:collectionName", async (req, res) => {
     }
 });
 
-app.get("/collections/:collectionName/getVectors", async (req, res) => {
+app.get("/api/collections/:collectionName/getVectors", async (req, res) => {
     try {
 
         const collectionName = req.params.collectionName;
@@ -118,7 +118,7 @@ app.get("/collections/:collectionName/getVectors", async (req, res) => {
     }
 });
 
-app.get("/promts", async (req, res) => {
+app.get("/api/promts", async (req, res) => {
     try {
 
         const promts = await PromtModel.find()
@@ -132,7 +132,7 @@ app.get("/promts", async (req, res) => {
 });
 
 // await sendRequest('голова болит').then(res => { console.log(res.data.choices[0].message.content) })
-app.delete("/collections/:collectionName/:uuid", async (req, res) => {
+app.delete("/api/collections/:collectionName/:uuid", async (req, res) => {
     try {
         const collectionName = req.params.collectionName;
         const uuid = req.params.uuid;
@@ -158,7 +158,7 @@ app.delete("/collections/:collectionName/:uuid", async (req, res) => {
     }
 });
 
-app.post("/collections/:collectionName/insert", async (req, res) => {
+app.post("/api/collections/:collectionName/insert", async (req, res) => {
     try {
         const collectionName = req.params.collectionName;
         // const uuid = req.params.uuid;
@@ -180,7 +180,7 @@ app.post("/collections/:collectionName/insert", async (req, res) => {
     }
 });
 
-app.post("/promts/test", async (req, res) => {
+app.post("/api/promts/test", async (req, res) => {
     try {
         
         const query = await sendRequest(req.body.question)
